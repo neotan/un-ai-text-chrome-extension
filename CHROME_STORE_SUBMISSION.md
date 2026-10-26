@@ -67,12 +67,16 @@ Un-AI Text is your lightweight, zero-latency browser companion for natural, huma
 
 ## 4. Graphic Assets Checklist (视觉图片物料)
 
-| Asset | Dimensions | File Location | Status |
-| :--- | :--- | :--- | :--- |
-| **Store Icon** | 128x128 PNG | `icons/icon128.png` | ✅ Ready in repo |
-| **Screenshot 1** | 1280x800 or 640x400 PNG | In-page floating assistant demo | 📸 Required |
-| **Screenshot 2** | 1280x800 or 640x400 PNG | Cliché replacement tab view | 📸 Optional (recommended) |
-| **Small Promo Tile** | 440x280 PNG | Chrome Web Store marquee | 📸 Optional |
+All promotional graphics and screenshots have been designed to Chrome Web Store official specifications and are available in [`store-assets/`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/):
+
+| Asset | Dimensions | File Location | Purpose & Description | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Store Icon** | 128x128 PNG | [`store-assets/store-icon-128x128.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/store-icon-128x128.png) | High-contrast store catalog icon | ✅ Ready |
+| **Screenshot 1** | 1280x800 PNG | [`store-assets/screenshot-1-radar-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-1-radar-1280x800.png) | 300ms Heuristic AI Risk Radar card overlay | ✅ Ready |
+| **Screenshot 2** | 1280x800 PNG | [`store-assets/screenshot-2-cliches-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-2-cliches-1280x800.png) | One-Click Local AI Cliché Cleaner | ✅ Ready |
+| **Screenshot 3** | 1280x800 PNG | [`store-assets/screenshot-3-shield-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-3-shield-1280x800.png) | Academic LaTeX & Markdown Table Protection | ✅ Ready |
+| **Small Promo Tile** | 440x280 PNG | [`store-assets/promo-small-tile-440x280.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/promo-small-tile-440x280.png) | Search results & category listing card | ✅ Ready |
+| **Marquee Banner** | 1400x560 PNG | [`store-assets/promo-marquee-banner-1400x560.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/promo-marquee-banner-1400x560.png) | Featured store spotlight banner | ✅ Ready |
 
 ---
 
