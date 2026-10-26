@@ -51,7 +51,16 @@
     { pattern: /\bwhen it comes to\b/gi, phrase: "when it comes to", options: ["with", "for", "on"] },
     { pattern: /\bin the realm of\b/gi, phrase: "in the realm of", options: ["in", "within", "across"] },
     { pattern: /\bfoster\b/gi, phrase: "foster", options: ["build", "encourage", "grow"] },
-    { pattern: /\bcomprehensive understanding\b/gi, phrase: "comprehensive understanding", options: ["full picture", "clear grasp", "rounded view"] }
+    { pattern: /\bcomprehensive understanding\b/gi, phrase: "comprehensive understanding", options: ["full picture", "clear grasp", "rounded view"] },
+    { pattern: /\bsignificantly improved\b/gi, phrase: "significantly improved", options: ["substantially improved", "markedly improved", "measurably improved"] },
+    { pattern: /\bsignificantly higher\b/gi, phrase: "significantly higher", options: ["substantially higher", "markedly higher", "notably higher"] },
+    { pattern: /\bsignificantly lower\b/gi, phrase: "significantly lower", options: ["substantially lower", "markedly lower", "notably lower"] },
+    { pattern: /\bpaves the way for\b/gi, phrase: "paves the way for", options: ["enables", "opens avenues for", "supports"] },
+    { pattern: /\bconclusively proves\b/gi, phrase: "conclusively proves", options: ["robustly indicates", "demonstrates", "reveals"] },
+    { pattern: /\bunprecedented\b/gi, phrase: "unprecedented", options: ["novel", "rare", "distinctive"] },
+    { pattern: /\bsuperior performance\b/gi, phrase: "superior performance", options: ["stronger performance", "improved performance", "competitive performance"] },
+    { pattern: /\bplays an indispensable role in\b/gi, phrase: "plays an indispensable role in", options: ["is central to", "is essential to", "drives"] },
+    { pattern: /\bfosters a deeper understanding of\b/gi, phrase: "fosters a deeper understanding of", options: ["deepens understanding of", "clarifies", "illuminates"] }
   ];
 
   const CONTRACTIONS = [
