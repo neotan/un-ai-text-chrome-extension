@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "unAI Text - AI Detector & Humanizer for Google Docs & Overleaf",
+  "name": "unAI Text - AI Detector & Humanizer",
   "short_name": "unAI Text",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "300ms AI detector, one-click AI cliché cleaner (delve, furthermore), and text humanizer with LaTeX formula & table protection.",
   "icons": {
     "16": "icons/icon16.png",
