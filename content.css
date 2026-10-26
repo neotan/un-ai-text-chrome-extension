@@ -1,0 +1,546 @@
+/* content.css - Un-AI Text 100% Authentic Website Theme & Assets */
+
+:host {
+  all: initial !important;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.unai-bubble, .unai-bubble *,
+.unai-card, .unai-card * {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+}
+
+/* Floating Trigger Bubble - Cobalt Navy to Cyan 3D Gradient (Matches icon.svg) */
+.unai-bubble {
+  position: fixed !important;
+  pointer-events: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 5px 13px 5px 6px !important;
+  background: linear-gradient(135deg, #163474 0%, #1c4494 30%, #1e68ca 70%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 25px -4px rgba(0, 117, 222, 0.4), 0 4px 10px -2px rgba(22, 52, 116, 0.3) !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  z-index: 2147483647 !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.unai-bubble:hover {
+  background: linear-gradient(135deg, #12254e 0%, #16336a 30%, #1a4286 70%, #0284c7 100%) !important;
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 14px 30px -4px rgba(0, 117, 222, 0.55), 0 6px 14px -2px rgba(22, 52, 116, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.unai-bubble-logo {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 5px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Floating Interactive Card - Exact un-ai-text.com Academic-Editorial Card */
+.unai-card {
+  position: fixed !important;
+  pointer-events: auto !important;
+  width: 380px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 18px 40px -4px rgba(0, 0, 0, 0.2), 0 6px 16px -2px rgba(0, 0, 0, 0.08) !important;
+  overflow: hidden !important;
+  z-index: 2147483647 !important;
+  animation: unai-card-appear 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes unai-card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header - Matches website .site-header & .brand */
+.unai-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 16px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.unai-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.unai-header-logo {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 7px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  box-shadow: 0 2px 6px rgba(14, 165, 233, 0.25) !important;
+}
+
+.unai-brand-titles {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.unai-brand-title {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+  letter-spacing: -0.03em !important;
+}
+
+.unai-pill-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-family: Inter, -apple-system, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  background: #f2f9ff !important; /* --accent-soft */
+  color: #0a5fb0 !important;    /* --accent-ink */
+  padding: 2px 7px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(0, 117, 222, 0.2) !important;
+}
+
+.unai-dot-live {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #1aae39 !important; /* --success */
+  display: inline-block !important;
+}
+
+.unai-close-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 26px !important;
+  height: 26px !important;
+  background: transparent !important;
+  border: none !important;
+  font-size: 15px !important;
+  color: #6b6661 !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  transition: all 0.15s ease !important;
+}
+
+.unai-close-btn:hover {
+  background: #f6f5f4 !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Tabs - Segmented Cadence Toggles (Gold Standard Theme line 2440) */
+.unai-tabs-wrap {
+  padding: 8px 12px !important;
+  background: #fbfaf9 !important; /* --surface-sunk */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.unai-tabs {
+  display: flex !important;
+  background: rgba(0, 0, 0, 0.055) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  padding: 3px !important;
+  gap: 3px !important;
+  border-radius: 9999px !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.unai-tab {
+  flex: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #595551 !important; /* --muted */
+  cursor: pointer !important;
+  border-radius: 9999px !important;
+  transition: all 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.unai-tab:hover {
+  color: rgba(0, 0, 0, 0.95) !important;
+  background: rgba(0, 0, 0, 0.035) !important;
+}
+
+.unai-tab.active {
+  background: #ffffff !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+  font-weight: 600 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Body */
+.unai-body {
+  padding: 14px 16px !important;
+  max-height: 280px !important;
+  overflow-y: auto !important;
+  background: #ffffff !important;
+}
+
+/* Radar Panel */
+.unai-radar-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.unai-score-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background: #fbfaf9 !important; /* --surface-sunk */
+}
+
+.unai-score-left {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 3px !important;
+}
+
+.unai-score-num {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.03em !important;
+  font-family: "Iowan Old Style", Georgia, serif !important;
+}
+
+.unai-score-percent {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.unai-score-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.badge-human {
+  background: #e9f9ee !important; /* website --success-soft */
+  color: #116b2e !important;    /* website --success-text */
+  border: 1px solid rgba(26, 174, 57, 0.3) !important;
+}
+
+.badge-moderate {
+  background: #fff4e9 !important; /* website --warn-soft */
+  color: #a34400 !important;    /* website --warn-text */
+  border: 1px solid rgba(221, 91, 0, 0.3) !important;
+}
+
+.badge-ai {
+  background: #fdecec !important; /* website --danger-soft */
+  color: #dc2626 !important;    /* website --danger */
+  border: 1px solid rgba(220, 38, 38, 0.3) !important;
+}
+
+.unai-stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+}
+
+.unai-stat-box {
+  background: #f6f5f4 !important; /* --surface */
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-radius: 8px !important;
+  padding: 8px 10px !important;
+  text-align: center !important;
+}
+
+.unai-stat-value {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.unai-stat-label {
+  font-size: 10px !important;
+  color: #6b6661 !important; /* --meta */
+  margin-top: 2px !important;
+}
+
+.unai-insight-box {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  background: #fbfaf9 !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+  color: #31302e !important; /* --fg-2 */
+}
+
+.unai-insight-icon {
+  font-size: 14px !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+
+/* Cleaner Panel */
+.unai-cleaner-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.unai-cliche-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  max-height: 150px !important;
+  overflow-y: auto !important;
+}
+
+.unai-cliche-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: #fbfaf9 !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  font-size: 11px !important;
+}
+
+.unai-cliche-target {
+  color: #dc2626 !important;
+  font-weight: 600 !important;
+  text-decoration: line-through !important;
+  background: #fdecec !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+}
+
+.unai-cliche-arrow {
+  color: #6b6661 !important;
+  font-size: 11px !important;
+}
+
+.unai-cliche-replacement {
+  color: #116b2e !important;
+  font-weight: 600 !important;
+  background: #e9f9ee !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+}
+
+.unai-empty-state {
+  text-align: center !important;
+  padding: 24px 12px !important;
+  background: #fbfaf9 !important;
+  border-radius: 10px !important;
+  border: 1px dashed rgba(0, 0, 0, 0.12) !important;
+}
+
+.unai-empty-title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #116b2e !important;
+  margin-bottom: 4px !important;
+}
+
+.unai-empty-desc {
+  font-size: 11px !important;
+  color: #595551 !important;
+}
+
+.unai-cleaner-actions {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.unai-action-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #ffffff !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.16) !important;
+  border-radius: 8px !important;
+  padding: 7px 14px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.unai-action-btn:hover {
+  background: #f6f5f4 !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Academic Tab */
+.unai-academic-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.unai-academic-card {
+  display: flex !important;
+  gap: 12px !important;
+  background: #fbfaf9 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+}
+
+.unai-shield-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: #e9f9ee !important;
+  border: 1px solid rgba(26, 174, 57, 0.3) !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.unai-academic-text strong {
+  font-size: 12px !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+  display: block !important;
+}
+
+.unai-academic-text p {
+  font-size: 11px !important;
+  color: #595551 !important;
+  margin-top: 3px !important;
+  line-height: 1.4 !important;
+}
+
+.unai-shield-pills {
+  display: flex !important;
+  gap: 8px !important;
+}
+
+.unai-shield-pill {
+  flex: 1 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+  text-align: center !important;
+}
+
+.unai-shield-pill.active {
+  border-color: rgba(26, 174, 57, 0.4) !important;
+  background: #e9f9ee !important;
+}
+
+.unai-pill-num {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.unai-shield-pill.active .unai-pill-num {
+  color: #116b2e !important;
+}
+
+.unai-pill-label {
+  font-size: 10px !important;
+  color: #6b6661 !important;
+  margin-top: 2px !important;
+}
+
+/* Footer & The Iconic .btn-run Gradient CTA (Matches line 461 of styles.css) */
+.unai-footer {
+  padding: 12px 16px !important;
+  background: #fbfaf9 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.07) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.unai-primary-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  /* Exact .btn-run signature gradient: linear-gradient(100deg, var(--accent) 0%, var(--ink-band) 130%) */
+  background: linear-gradient(100deg, #0075de 0%, #213183 130%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 11px 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 20px -2px rgba(0, 117, 222, 0.35) !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  letter-spacing: -0.01em !important;
+}
+
+.unai-primary-cta:hover {
+  background: linear-gradient(100deg, #005bab 0%, #18255f 130%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 12px 26px -2px rgba(0, 117, 222, 0.45) !important;
+}
+
+.unai-primary-cta:active {
+  transform: scale(0.98) !important;
+}
+
+.unai-cta-subtext {
+  text-align: center !important;
+  font-size: 10px !important;
+  color: #6b6661 !important;
+}
