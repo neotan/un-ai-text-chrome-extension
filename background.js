@@ -48,7 +48,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 // Handle Context Menu clicks
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (!tab || !tab.id) return;
   const selectedText = info.selectionText || "";
 
@@ -56,9 +56,19 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     // Open web app with preloaded text in academic or standard mode
     const encoded = encodeURIComponent(selectedText.slice(0, 3000));
     chrome.tabs.create({
-      url: `${WEBSITE_URL}/?from=extension&input=${encoded}`
+      url: `${WEBSITE_URL}/?from=extension&utm_source=chrome_extension&utm_medium=context_menu&input=${encoded}`
     });
     return;
+  }
+
+  // Inject content scripts dynamically into the active tab via activeTab permission
+  try {
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["cliches.js", "prepass.js", "academic-guard.js", "content.js"]
+    });
+  } catch (err) {
+    console.warn("Script injection note:", err);
   }
 
   // Send message to content script to display the interactive card

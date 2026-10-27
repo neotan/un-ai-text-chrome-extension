@@ -48,14 +48,15 @@ Un-AI Text is your lightweight, zero-latency browser companion for natural, huma
 ### 3.1 Single Purpose Description (单一用途声明)
 > *To help users analyze AI-generated writing patterns, clean robotic clichés, and protect academic formulas across web text editors.*
 
-### 3.2 Permission Justifications (权限合理性说明)
+### 3.2 Permission Justifications (权限合理性说明 - 复制填入后台)
 
-| Permission | Official Review Justification (审核理由) |
+| Permission | Official Review Justification (审核理由 - 直接复制) |
 | :--- | :--- |
-| **`activeTab`** | *Used solely to read user-selected text and render the in-page floating analysis bubble when explicitly selected.* |
-| **`contextMenus`** | *Allows users to right-click highlighted text to trigger "Analyze with unAI Text" or "Clean AI Clichés".* |
-| **`storage`** | *Saves user UI preferences (such as enabling/disabling the floating bubble) and tracks daily local scan count.* |
-| **`host_permissions` (`https://un-ai-text.com/*`)** | *Required to seamlessly bridge user-selected text to the web application workbench upon clicking the launch button.* |
+| **`activeTab`** | *Used temporarily to read user-highlighted text and display the in-page heuristic analysis card only when the user explicitly triggers an action via the context menu or toolbar popup.* |
+| **`contextMenus`** | *Enables right-click menu actions ("Quick AI Risk Radar", "Clean AI Clichés", "Humanize on Web") on user-selected text.* |
+| **`scripting`** | *Used on-demand in response to explicit user interaction to inject the lightweight Shadow DOM analysis card into the active tab without requiring broad host permissions.* |
+| **`storage`** | *Saves user preferences (enabling/disabling in-page card) and tracks daily local scan counts.* |
+| **Host Permissions** | *(None requested / 零主机权限)* |
 
 ### 3.3 Data Usage Declarations (数据使用问卷)
 - **Does this extension collect user data?** $\rightarrow$ Select **No** (All analysis executes client-side).
@@ -67,16 +68,16 @@ Un-AI Text is your lightweight, zero-latency browser companion for natural, huma
 
 ## 4. Graphic Assets Checklist (视觉图片物料)
 
-All promotional graphics and screenshots have been designed to Chrome Web Store official specifications and are available in [`store-assets/`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/):
+All promotional graphics and screenshots have been designed to Chrome Web Store official specifications and are available in [`store-assets/`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/):
 
 | Asset | Dimensions | File Location | Purpose & Description | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **Store Icon** | 128x128 PNG | [`store-assets/store-icon-128x128.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/store-icon-128x128.png) | High-contrast store catalog icon | ✅ Ready |
-| **Screenshot 1** | 1280x800 PNG | [`store-assets/screenshot-1-radar-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-1-radar-1280x800.png) | 300ms Heuristic AI Risk Radar card overlay | ✅ Ready |
-| **Screenshot 2** | 1280x800 PNG | [`store-assets/screenshot-2-cliches-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-2-cliches-1280x800.png) | One-Click Local AI Cliché Cleaner | ✅ Ready |
-| **Screenshot 3** | 1280x800 PNG | [`store-assets/screenshot-3-shield-1280x800.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/screenshot-3-shield-1280x800.png) | Academic LaTeX & Markdown Table Protection | ✅ Ready |
-| **Small Promo Tile** | 440x280 PNG | [`store-assets/promo-small-tile-440x280.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/promo-small-tile-440x280.png) | Search results & category listing card | ✅ Ready |
-| **Marquee Banner** | 1400x560 PNG | [`store-assets/promo-marquee-banner-1400x560.png`](file:///D:/workspace/un-ai-text-chrome-extension/store-assets/promo-marquee-banner-1400x560.png) | Featured store spotlight banner | ✅ Ready |
+| **Store Icon** | 128x128 PNG | [`store-assets/store-icon-128x128.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/store-icon-128x128.png) | High-contrast store catalog icon | ✅ Ready |
+| **Screenshot 1** | 1280x800 PNG | [`store-assets/screenshot-1-radar-1280x800.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/screenshot-1-radar-1280x800.png) | 300ms Heuristic AI Risk Radar card overlay | ✅ Ready |
+| **Screenshot 2** | 1280x800 PNG | [`store-assets/screenshot-2-cliches-1280x800.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/screenshot-2-cliches-1280x800.png) | One-Click Local AI Cliché Cleaner | ✅ Ready |
+| **Screenshot 3** | 1280x800 PNG | [`store-assets/screenshot-3-shield-1280x800.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/screenshot-3-shield-1280x800.png) | Academic LaTeX & Markdown Table Protection | ✅ Ready |
+| **Small Promo Tile** | 440x280 PNG | [`store-assets/promo-small-tile-440x280.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/promo-small-tile-440x280.png) | Search results & category listing card | ✅ Ready |
+| **Marquee Banner** | 1400x560 PNG | [`store-assets/promo-marquee-banner-1400x560.png`](file:///D:/workspace/un-ai-text/chrome-extension/store-assets/promo-marquee-banner-1400x560.png) | Featured store spotlight banner | ✅ Ready |
 
 ---
 

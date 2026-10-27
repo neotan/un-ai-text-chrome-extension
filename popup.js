@@ -71,6 +71,30 @@ document.addEventListener("DOMContentLoaded", () => {
     charCount.textContent = `${textarea.value.length} chars`;
   });
 
+  // Pre-fill from active tab selection if user highlighted text before opening popup
+  if (chrome.tabs && chrome.scripting) {
+    chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+      if (tabs && tabs[0] && tabs[0].id) {
+        try {
+          const res = await chrome.scripting.executeScript({
+            target: { tabId: tabs[0].id },
+            func: () => (window.getSelection ? window.getSelection().toString() : "")
+          });
+          if (res && res[0] && res[0].result && res[0].result.trim().length > 0) {
+            const selected = res[0].result.trim();
+            if (!textarea.value.trim()) {
+              textarea.value = selected;
+              charCount.textContent = `${selected.length} chars`;
+              btnAnalyze.click();
+            }
+          }
+        } catch (e) {
+          // Restricted tabs like chrome://, ignore
+        }
+      }
+    });
+  }
+
   btnAnalyze.addEventListener("click", () => {
     const text = textarea.value.trim();
     if (!text) return;

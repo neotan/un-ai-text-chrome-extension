@@ -22,25 +22,10 @@
     "service_worker": "background.js",
     "type": "module"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["cliches.js", "prepass.js", "academic-guard.js", "content.js"],
-      "run_at": "document_idle"
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["icons/*"],
-      "matches": ["<all_urls>"]
-    }
-  ],
   "permissions": [
     "contextMenus",
     "storage",
-    "activeTab"
-  ],
-  "host_permissions": [
-    "https://un-ai-text.com/*"
+    "activeTab",
+    "scripting"
   ]
 }
