@@ -14,12 +14,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnDeepRewrite = document.getElementById("btn-deep-rewrite");
   const toggleBubble = document.getElementById("toggle-bubble");
   const quotaVal = document.getElementById("quota-val");
+  const ratePrompt = document.getElementById("rate-prompt");
+  const btnRateDismiss = document.getElementById("btn-rate-dismiss");
+  const btnRateCws = document.getElementById("btn-rate-cws");
 
-  // Load Quota
+  // Load Quota & Review Prompt
   if (chrome.runtime && chrome.runtime.sendMessage) {
     chrome.runtime.sendMessage({ action: "get-quota" }, (res) => {
       if (res) {
         quotaVal.textContent = `${res.used} / ${res.limit} Used`;
+        
+        // Show 5-star review prompt after 3 scans if not dismissed
+        if (chrome.storage && chrome.storage.local && res.used >= 3) {
+          chrome.storage.local.get(["rate_dismissed"], (st) => {
+            if (!st.rate_dismissed && ratePrompt) {
+              ratePrompt.classList.remove("hidden");
+            }
+          });
+        }
+      }
+    });
+  }
+
+  if (btnRateDismiss) {
+    btnRateDismiss.addEventListener("click", () => {
+      if (ratePrompt) ratePrompt.classList.add("hidden");
+      if (chrome.storage && chrome.storage.local) {
+        chrome.storage.local.set({ rate_dismissed: true });
+      }
+    });
+  }
+
+  if (btnRateCws) {
+    btnRateCws.addEventListener("click", () => {
+      if (ratePrompt) ratePrompt.classList.add("hidden");
+      if (chrome.storage && chrome.storage.local) {
+        chrome.storage.local.set({ rate_dismissed: true });
       }
     });
   }

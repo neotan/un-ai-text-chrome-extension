@@ -101,7 +101,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const encoded = encodeURIComponent((request.text || "").slice(0, 3000));
     const mode = request.mode || "standard";
     chrome.tabs.create({
-      url: `${WEBSITE_URL}/?from=extension&mode=${mode}&input=${encoded}`
+      url: `${WEBSITE_URL}/?from=extension&utm_source=chrome_extension&utm_medium=floating_card&mode=${mode}&input=${encoded}`
     });
     sendResponse({ success: true });
     return true;

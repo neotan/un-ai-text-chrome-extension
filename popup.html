@@ -19,6 +19,17 @@
       </a>
     </header>
 
+    <div id="rate-prompt" class="rate-prompt hidden">
+      <div class="rate-prompt-text">
+        <span class="rate-title">⭐ Enjoying unAI Text?</span>
+        <p class="rate-desc">Help other researchers by leaving a 5-star review!</p>
+      </div>
+      <div class="rate-prompt-actions">
+        <a href="https://chromewebstore.google.com/detail/unai-text" target="_blank" id="btn-rate-cws" class="btn-rate">Rate 5★</a>
+        <button id="btn-rate-dismiss" class="btn-dismiss" title="Dismiss">✕</button>
+      </div>
+    </div>
+
     <main class="main-body">
       <div class="input-card">
         <textarea id="test-input" placeholder="Paste or type text to check AI risk & clean clichés..." rows="4"></textarea>
@@ -73,10 +84,14 @@
     </main>
 
     <footer class="footer">
-      <a href="https://chromewebstore.google.com/detail/unai-text" target="_blank" class="cws-link">
-        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <span>Rate 5 Stars on Chrome Store</span>
-      </a>
+      <div class="footer-links">
+        <a href="https://un-ai-text.com/pricing?utm_source=extension_popup" target="_blank" class="footer-link">💎 Pro Upgrade</a>
+        <span class="footer-sep">•</span>
+        <a href="https://un-ai-text.com/tools/chatgpt-rewriter?utm_source=extension_popup" target="_blank" class="footer-link">📖 AI Humanizer Guide</a>
+      </div>
+      <div class="brand-search-note">
+        💡 Search <strong>"un-ai-text"</strong> on Google to access cloud drafts
+      </div>
     </footer>
   </div>
 
