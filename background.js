@@ -1,7 +1,7 @@
 // background.js - Service Worker for unAI Text Extension
 
 const WEBSITE_URL = "https://un-ai-text.com";
-const WELCOME_URL = `${WEBSITE_URL}/welcome-extension`;
+const WELCOME_URL = `${WEBSITE_URL}/extension?installed=true`;
 const UNINSTALL_URL = `${WEBSITE_URL}/contact?topic=uninstall-feedback`;
 
 // Setup context menus & welcome redirect on install
